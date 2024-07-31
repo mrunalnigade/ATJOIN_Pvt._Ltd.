@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Create a PDF</h1>
+        <form id="pdfForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="photo">Photo:</label>
+            <input type="file" id="photo" name="photo" accept="image/*" required>
+
+            <label for="rank">Rank:</label>
+            <select id="rank" name="rank" required>
+                <option value="First Rank">First Rank</option>
+                <option value="Second Rank">Second Rank</option>
+                <option value="Third Rank">Third Rank</option>
+            </select>
+
+            <label for="idNumber">ID Number (#XXXXXX):</label>
+            <input type="text" id="idNumber" name="idNumber" pattern="#[0-9]{6}" required>
+
+            <button type="submit">Generate PDF</button>
+        </form>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.3.2/html2canvas.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
